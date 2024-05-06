@@ -73,7 +73,7 @@ def modelEval(train_data, trainLbl, test_data, test_labels, k):
 df = pd.read_csv("spambase.csv")
 
 # Exclude the last four columns (capitals data and label) for KNN
-data = df.drop(['capital_run_length_average', 'capital_run_length_longest', 'capital_run_length_total', 'spam'], axis=1)
+data = df.drop(['spam'], axis=1)
 labels = df['spam']
 
 # Initialize K-fold cross-validation
